@@ -14,7 +14,6 @@ session = auth_flow.get_session()
 
 from lyft_rides.client import LyftRidesClient
 client = LyftRidesClient(session)
-response = client.get_ride_types(37.7833, -122.4167)
-ride_types = response.json.get('ride_types')
-
+response = client.get_cost_estimates(37.7763, -122.391, 37.7972, -122.4533)
+ride_types = response.json.get('cost_estimates')
 print(ride_types)
